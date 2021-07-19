@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
 
-class TransactionComponent extends Component {
+class CalculatorComponent extends Component {
   state = {};
   render() {
     return (
       <View>
-        <Text>Transaction Page</Text>
+        <Text>Calculator Page</Text>
       </View>
     );
   }
 }
 
-export default TransactionComponent;
+export default CalculatorComponent;
