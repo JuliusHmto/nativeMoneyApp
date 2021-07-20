@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TransactionComponent from '../components/transaction/transaction.component';
+import TransactionComponent from '../components/transaction/Transaction.component';
 
 class TransactionPage extends Component {
   state = {};

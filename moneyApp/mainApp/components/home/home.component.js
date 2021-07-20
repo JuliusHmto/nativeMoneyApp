@@ -8,7 +8,7 @@ import {
   View,
   Image,
 } from 'react-native';
-import styles from './home.styles';
+import styles from './Home.styles';
 import greenBox from '../../../images/greenBox.png';
 import redBox from '../../../images/redBox.png';
 

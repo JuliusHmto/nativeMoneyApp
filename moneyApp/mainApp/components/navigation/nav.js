@@ -8,23 +8,13 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import styles from './nav.styles';
+import styles from './Nav.styles';
 import {theme} from '../../styles/core.styles';
-import HomePage from '../../pages/home.page';
-import TransactionPage from '../../pages/transaction.page';
-import CalculatorPage from '../../pages/calculator.page';
-import AccountPage from '../../pages/account.page';
-import {
-  homeGreen,
-  homeGrey,
-  walletGreen,
-  walletGrey,
-  calculatorGreen,
-  calculatorGrey,
-  userGreen,
-  userGrey,
-  addIcon,
-} from '../../../images/index';
+import HomePage from '../../pages/Home.page';
+import TransactionPage from '../../pages/Transaction.page';
+import CalculatorPage from '../../pages/Calculator.page';
+import AccountPage from '../../pages/Account.page';
+import {home, wallet, calculator, user, addIcon} from '../../../images/index';
 
 const Tab = createBottomTabNavigator();
 
@@ -52,7 +42,7 @@ const Tabs = () => {
           tabBarIcon: ({focused}) => (
             <View style={styles.iconContainer}>
               <Image
-                source={homeGreen}
+                source={home}
                 style={{
                   tintColor: focused ? theme.green : theme.grey,
                   ...styles.icon,
@@ -75,7 +65,7 @@ const Tabs = () => {
           tabBarIcon: ({focused}) => (
             <View style={styles.iconContainer}>
               <Image
-                source={walletGrey}
+                source={wallet}
                 style={{
                   tintColor: focused ? theme.green : theme.grey,
                   ...styles.icon,
@@ -113,7 +103,7 @@ const Tabs = () => {
           tabBarIcon: ({focused}) => (
             <View style={styles.iconContainer}>
               <Image
-                source={calculatorGrey}
+                source={calculator}
                 style={{
                   tintColor: focused ? theme.green : theme.grey,
                   ...styles.icon,
@@ -136,7 +126,7 @@ const Tabs = () => {
           tabBarIcon: ({focused}) => (
             <View style={styles.iconContainer}>
               <Image
-                source={userGrey}
+                source={user}
                 style={{
                   tintColor: focused ? theme.green : theme.grey,
                   ...styles.icon,

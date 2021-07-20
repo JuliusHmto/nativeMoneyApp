@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CalculatorComponent from '../components/calculator/calculator.component';
+import CalculatorComponent from '../components/calculator/Calculator.component';
 
 class CalculatorPage extends Component {
   state = {};

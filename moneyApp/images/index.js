@@ -1,9 +1,16 @@
-export {default as homeGreen} from './homeGreen.png';
-export {default as homeGrey} from './homeGrey.png';
-export {default as walletGreen} from './walletGreen.png';
-export {default as walletGrey} from './walletGrey.png';
-export {default as calculatorGreen} from './calculatorGreen.png';
-export {default as calculatorGrey} from './calculatorGrey.png';
-export {default as userGreen} from './userGreen.png';
-export {default as userGrey} from './userGrey.png';
+//icons
+export {default as home} from './home.png';
+export {default as wallet} from './wallet.png';
+export {default as calculator} from './calculator.png';
+export {default as user} from './user.png';
 export {default as addIcon} from './addIcon.png';
+
+//images
+export {default as interestRate} from './interestRate.png';
+export {default as file} from './file.png';
+export {default as trophy} from './trophy.png';
+export {default as handshake} from './handshake.png';
+export {default as present} from './present.png';
+export {default as shoppingCart} from './shoppingCart.png';
+export {default as money} from './money.png';
+export {default as breakfast} from './breakfast.png';

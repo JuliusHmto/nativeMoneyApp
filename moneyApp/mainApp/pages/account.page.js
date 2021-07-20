@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import AccountComponent from '../components/account/account.component';
+import AccountComponent from '../components/account/Account.component';
 
 class AccountPage extends Component {
   state = {};
