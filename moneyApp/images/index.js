@@ -14,3 +14,7 @@ export {default as present} from './present.png';
 export {default as shoppingCart} from './shoppingCart.png';
 export {default as money} from './money.png';
 export {default as breakfast} from './breakfast.png';
+export {default as car} from './car.png';
+export {default as health} from './health.png';
+export {default as investment} from './investment.png';
+export {default as slip} from './slip.png';
