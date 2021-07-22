@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import AddExpenseComponent from '../components/transaction/AddExpense.component';
+import AddExpenseComponent from '../components/transaction/expense/AddExpense.component';
 
 class AddExpensePage extends Component {
   state = {};
   render() {
-    return <AccountComponent />;
+    return <AddExpenseComponent />;
   }
 }
 

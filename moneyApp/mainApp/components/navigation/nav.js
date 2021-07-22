@@ -1,12 +1,5 @@
 import React, {Component} from 'react';
-import {
-  View,
-  Text,
-  Image,
-  Dimensions,
-  Touchable,
-  TouchableOpacity,
-} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import styles from './Nav.styles';
 import {theme} from '../../styles/core.styles';
@@ -24,126 +17,129 @@ const CustomTabBarButton = ({children, onPress}) => (
   </TouchableOpacity>
 );
 
-const Tabs = () => {
-  return (
-    <Tab.Navigator
-      initialRouteName="Home"
-      tabBarOptions={{
-        showLabel: false,
-        showIcon: true,
-        style: {
-          ...styles.container,
-        },
-      }}>
-      <Tab.Screen
-        name="Home"
-        component={HomePage}
-        options={{
-          tabBarIcon: ({focused}) => (
-            <View style={styles.iconContainer}>
+class Nav extends Component {
+  state = {};
+  render() {
+    return (
+      <Tab.Navigator
+        initialRouteName="Home"
+        tabBarOptions={{
+          showLabel: false,
+          showIcon: true,
+          style: {
+            ...styles.container,
+          },
+        }}>
+        <Tab.Screen
+          name="Home"
+          component={HomePage}
+          options={{
+            tabBarIcon: ({focused}) => (
+              <View style={styles.iconContainer}>
+                <Image
+                  source={home}
+                  style={{
+                    tintColor: focused ? theme.green : theme.grey,
+                    ...styles.icon,
+                  }}
+                />
+                <Text
+                  style={{
+                    color: focused ? theme.green : theme.black,
+                  }}>
+                  Home
+                </Text>
+              </View>
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Transactions"
+          component={TransactionPage}
+          options={{
+            tabBarIcon: ({focused}) => (
+              <View style={styles.iconContainer}>
+                <Image
+                  source={wallet}
+                  style={{
+                    tintColor: focused ? theme.green : theme.grey,
+                    ...styles.icon,
+                  }}
+                />
+                <Text
+                  style={{
+                    color: focused ? theme.green : theme.black,
+                  }}>
+                  Transactions
+                </Text>
+              </View>
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Add Transaction"
+          component={TransactionPage}
+          options={{
+            tabBarIcon: () => (
               <Image
-                source={home}
+                source={addIcon}
                 style={{
-                  tintColor: focused ? theme.green : theme.grey,
-                  ...styles.icon,
+                  ...styles.middleIcon,
                 }}
               />
-              <Text
-                style={{
-                  color: focused ? theme.green : theme.black,
-                }}>
-                Home
-              </Text>
-            </View>
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Transactions"
-        component={TransactionPage}
-        options={{
-          tabBarIcon: ({focused}) => (
-            <View style={styles.iconContainer}>
-              <Image
-                source={wallet}
-                style={{
-                  tintColor: focused ? theme.green : theme.grey,
-                  ...styles.icon,
-                }}
-              />
-              <Text
-                style={{
-                  color: focused ? theme.green : theme.black,
-                }}>
-                Transactions
-              </Text>
-            </View>
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Add Transaction"
-        component={TransactionPage}
-        options={{
-          tabBarIcon: () => (
-            <Image
-              source={addIcon}
-              style={{
-                ...styles.middleIcon,
-              }}
-            />
-          ),
-          tabBarButton: props => <CustomTabBarButton {...props} />,
-        }}
-      />
-      <Tab.Screen
-        name="Calculator"
-        component={CalculatorPage}
-        options={{
-          tabBarIcon: ({focused}) => (
-            <View style={styles.iconContainer}>
-              <Image
-                source={calculator}
-                style={{
-                  tintColor: focused ? theme.green : theme.grey,
-                  ...styles.icon,
-                }}
-              />
-              <Text
-                style={{
-                  color: focused ? theme.green : theme.black,
-                }}>
-                Calculator
-              </Text>
-            </View>
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Account"
-        component={AccountPage}
-        options={{
-          tabBarIcon: ({focused}) => (
-            <View style={styles.iconContainer}>
-              <Image
-                source={user}
-                style={{
-                  tintColor: focused ? theme.green : theme.grey,
-                  ...styles.icon,
-                }}
-              />
-              <Text
-                style={{
-                  color: focused ? theme.green : theme.black,
-                }}>
-                Account
-              </Text>
-            </View>
-          ),
-        }}
-      />
-    </Tab.Navigator>
-  );
-};
+            ),
+            tabBarButton: props => <CustomTabBarButton {...props} />,
+          }}
+        />
+        <Tab.Screen
+          name="Calculator"
+          component={CalculatorPage}
+          options={{
+            tabBarIcon: ({focused}) => (
+              <View style={styles.iconContainer}>
+                <Image
+                  source={calculator}
+                  style={{
+                    tintColor: focused ? theme.green : theme.grey,
+                    ...styles.icon,
+                  }}
+                />
+                <Text
+                  style={{
+                    color: focused ? theme.green : theme.black,
+                  }}>
+                  Calculator
+                </Text>
+              </View>
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Account"
+          component={AccountPage}
+          options={{
+            tabBarIcon: ({focused}) => (
+              <View style={styles.iconContainer}>
+                <Image
+                  source={user}
+                  style={{
+                    tintColor: focused ? theme.green : theme.grey,
+                    ...styles.icon,
+                  }}
+                />
+                <Text
+                  style={{
+                    color: focused ? theme.green : theme.black,
+                  }}>
+                  Account
+                </Text>
+              </View>
+            ),
+          }}
+        />
+      </Tab.Navigator>
+    );
+  }
+}
 
-export default Tabs;
+export default Nav;

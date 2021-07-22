@@ -8,7 +8,7 @@ import {
   trophy,
   file,
   money,
-} from '../../../images/index';
+} from '../../../../images/index';
 
 class AddIncomeComponent extends Component {
   state = {};

@@ -1,5 +1,5 @@
 import {StyleSheet, Dimensions} from 'react-native';
-import {theme} from '../../styles/core.styles';
+import {theme} from '../../../styles/core.styles';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     top: 10,
     height: 3,
     width: 100,
-    backgroundColor: theme.green,
+    backgroundColor: theme.red,
   },
   icon: {
     width: 50,

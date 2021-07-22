@@ -18,3 +18,8 @@ export {default as car} from './car.png';
 export {default as health} from './health.png';
 export {default as investment} from './investment.png';
 export {default as slip} from './slip.png';
+export {default as openBook} from './openBook.png';
+export {default as landscape} from './landscape.png';
+export {default as house} from './house.png';
+export {default as charity} from './charity.png';
+export {default as chat} from './chat.png';

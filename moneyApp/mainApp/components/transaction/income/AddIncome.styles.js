@@ -1,5 +1,5 @@
 import {StyleSheet, Dimensions} from 'react-native';
-import {theme} from '../../styles/core.styles';
+import {theme} from '../../../styles/core.styles';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
