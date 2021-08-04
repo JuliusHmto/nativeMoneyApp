@@ -66,22 +66,6 @@ export function categoryImage(category) {
   return catImage;
 }
 
-export function groupByDayAndMonth(transactions) {
-  // var output = map(groupBy(transactions, 'month'), function (obj, key) {
-  //   var temp = {};
-  //   temp[key] = groupBy(obj, 'date');
-  //   return temp;
-  // });
-
-  var months = chain(transactions)
-    .groupBy('month')
-    .map((value, key) => ({month: key, transactions: value}))
-    .value();
-
-  console.log(months);
-  return month;
-}
-
 export function getItemByKey(arr, key, value) {
   // here we look for existing group item in the result array
   return arr.reduce(function (prev, cur) {
