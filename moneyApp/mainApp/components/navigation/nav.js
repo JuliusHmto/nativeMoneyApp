@@ -3,11 +3,13 @@ import {View, Text, Image, TouchableOpacity} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import styles from './Nav.styles';
 import {theme} from '../../styles/core.styles';
+import {connect} from 'react-redux';
 import HomePage from '../../pages/Home.page';
 import TransactionPage from '../../pages/Transaction.page';
 import CalculatorPage from '../../pages/Calculator.page';
 import AccountPage from '../../pages/Account.page';
 import {home, wallet, calculator, user, addIcon} from '../../../images/index';
+import {getTransactions} from '../../api/api.utils';
 
 const Tab = createBottomTabNavigator();
 
@@ -56,19 +58,26 @@ class Nav extends Component {
         <Tab.Screen
           name="Transactions"
           component={TransactionPage}
+          listeners={{
+            tabPress: () => {
+              this.props.getTransactions();
+            },
+          }}
           options={{
-            tabBarIcon: ({focused}) => (
-              <View style={styles.iconContainer}>
+            tabBarIcon: props => (
+              <View
+                style={styles.iconContainer}
+                onPress={props.getTransactions}>
                 <Image
                   source={wallet}
                   style={{
-                    tintColor: focused ? theme.green : theme.grey,
+                    tintColor: props.focused ? theme.green : theme.grey,
                     ...styles.icon,
                   }}
                 />
                 <Text
                   style={{
-                    color: focused ? theme.green : theme.black,
+                    color: props.focused ? theme.green : theme.black,
                   }}>
                   Transactions
                 </Text>
@@ -142,4 +151,10 @@ class Nav extends Component {
   }
 }
 
-export default Nav;
+const mapDispatchToProps = dispatch => {
+  return {
+    getTransactions: () => dispatch(getTransactions()),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Nav);

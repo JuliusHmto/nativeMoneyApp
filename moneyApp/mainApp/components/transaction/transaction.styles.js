@@ -16,6 +16,9 @@ const styles = StyleSheet.create({
     width: width,
     backgroundColor: theme.white,
   },
+  navOptContainer: {
+    paddingVertical: 20,
+  },
   topTextContainer: {
     alignItems: 'flex-start',
     paddingTop: 50,
@@ -24,8 +27,15 @@ const styles = StyleSheet.create({
   bottomContainer: {
     width: width,
     alignItems: 'center',
-    paddingTop: 50,
+    paddingTop: 20,
     alignSelf: 'center',
+  },
+  navScrollOpt: {
+    backgroundColor: theme.mediumGrey,
+    marginHorizontal: 10,
+    paddingHorizontal: 20,
+    paddingVertical: 5,
+    borderRadius: 15,
   },
   optionsLayout: {
     flexDirection: 'row',
@@ -36,9 +46,8 @@ const styles = StyleSheet.create({
     fontWeight: theme.bold,
   },
   optionText: {
-    fontSize: theme.font12,
-    fontWeight: theme.medium,
-    paddingTop: 10,
+    fontSize: theme.font14,
+    fontWeight: theme.bold,
   },
   line: {
     top: 10,
@@ -47,14 +56,27 @@ const styles = StyleSheet.create({
     backgroundColor: theme.red,
   },
   icon: {
-    width: 50,
-    height: 50,
+    width: 40,
+    height: 40,
   },
-  optionCont: {
-    height: 100,
-    width: 100,
+  iconCont: {
+    width: 60,
+    height: 60,
+    backgroundColor: theme.mediumGrey,
+    borderRadius: 15,
     alignItems: 'center',
-    marginRight: 10,
+    justifyContent: 'center',
+  },
+  textCont: {
+    paddingLeft: 20,
+  },
+  trxCont: {
+    height: 100,
+    width: width * 0.85,
+    alignItems: 'center',
+    flexDirection: 'row',
+    marginVertical: 10,
+    paddingLeft: 20,
     backgroundColor: theme.white,
     borderWidth: 1,
     borderRadius: 15,
@@ -63,6 +85,22 @@ const styles = StyleSheet.create({
     shadowOffset: {width: 0, height: 4},
     shadowOpacity: 0.1,
     elevation: 5,
+  },
+  priceText: {
+    fontSize: theme.font18,
+    fontWeight: theme.bold,
+  },
+  textRed: {
+    color: theme.red,
+  },
+  textGreen: {
+    color: theme.green,
+  },
+  categoryText: {
+    fontSize: theme.font10,
+  },
+  noteText: {
+    fontWeight: theme.medium,
   },
 });
 

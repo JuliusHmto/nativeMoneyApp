@@ -22,10 +22,12 @@ class TransactionPage extends Component {
 TransactionPage.propTypes = {
   transactions: PropTypes.object,
   getTransactions: PropTypes.func,
+  groupByDay: PropTypes.func,
+  groupByMonth: PropTypes.func,
 };
 
 const mapStateToProps = state => ({
-  transactions: result(state, 'transactions.values', {}),
+  transactions: result(state, 'transactions.transactions', {}),
 });
 
 const mapDispatchToProps = dispatch => {
