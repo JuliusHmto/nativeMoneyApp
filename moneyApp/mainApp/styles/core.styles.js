@@ -22,12 +22,15 @@ let theme = {
   font14: 14,
   font16: 16,
   font18: 18,
+  font20: 20,
+  font22: 22,
   font24: 24,
+  font32: 32,
   font36: 36,
   font48: 48,
 
   //font weights:
-  light: '200',
+  light: '100',
   normal: '400',
   medium: '500',
   bold: '700',

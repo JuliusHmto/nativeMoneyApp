@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
   containerDivider: {
     backgroundColor: theme.white,
-    height: height * 1.5,
+    height: height * 1.5, //for extra bottom height
     width: width,
     borderWidth: 1,
     borderColor: 'transparent',

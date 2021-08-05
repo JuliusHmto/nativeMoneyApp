@@ -10,6 +10,7 @@ const {width, height} = Dimensions.get('window');
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    height: height,
   },
   topContainer: {
     height: height,
@@ -17,7 +18,8 @@ const styles = StyleSheet.create({
     backgroundColor: theme.white,
   },
   navOptContainer: {
-    paddingVertical: 20,
+    paddingTop: 20,
+    paddingBottom: 10,
   },
   topTextContainer: {
     alignItems: 'flex-start',
@@ -29,6 +31,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 20,
     alignSelf: 'center',
+    paddingBottom: 100, //for extra bottom height
   },
   navScrollOpt: {
     backgroundColor: theme.mediumGrey,
@@ -87,7 +90,7 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   priceText: {
-    fontSize: theme.font18,
+    fontSize: theme.font22,
     fontWeight: theme.bold,
   },
   textRed: {
@@ -97,10 +100,21 @@ const styles = StyleSheet.create({
     color: theme.green,
   },
   categoryText: {
-    fontSize: theme.font10,
+    fontSize: theme.font12,
+    fontWeight: '100',
   },
   noteText: {
+    fontSize: theme.font16,
     fontWeight: theme.medium,
+  },
+  monthText: {
+    fontWeight: theme.bold,
+    fontSize: theme.font32,
+  },
+  dayText: {
+    fontSize: theme.font18,
+    fontWeight: theme.bold,
+    paddingBottom: 10,
   },
 });
 

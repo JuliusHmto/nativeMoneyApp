@@ -1,3 +1,4 @@
+import {filter} from 'lodash';
 import {
   breakfast,
   charity,
@@ -17,7 +18,6 @@ import {
   present,
   handshake,
 } from '../../images/index';
-import {chain, groupBy, map, mapValues, omit} from 'lodash';
 
 export function priceFormat(price) {
   const formatPrice = price
@@ -135,4 +135,25 @@ export function groupArray(arr, args, lvl) {
 export function groupArrayMain(arr, keysArray) {
   const grouped = groupArray(arr, arguments, 1);
   return grouped;
+}
+
+export function groupCurrMonth(arr) {
+  const date = new Date();
+  let currMonthYear = date.toLocaleString('en-us', {
+    month: 'long',
+    year: 'numeric',
+  });
+  const filtered = filter(arr, {month: currMonthYear});
+  return filtered;
+}
+
+export function groupLastMonth(arr) {
+  const date = new Date();
+  date.setMonth(date.getMonth() - 1);
+  let lastMonthYear = date.toLocaleString('en-us', {
+    month: 'long',
+    year: 'numeric',
+  });
+  const filtered = filter(arr, {month: lastMonthYear});
+  return filtered;
 }

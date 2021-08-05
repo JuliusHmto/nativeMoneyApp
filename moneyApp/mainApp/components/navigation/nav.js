@@ -4,6 +4,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import styles from './Nav.styles';
 import {theme} from '../../styles/core.styles';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 import HomePage from '../../pages/Home.page';
 import TransactionPage from '../../pages/Transaction.page';
 import CalculatorPage from '../../pages/Calculator.page';
@@ -65,9 +66,7 @@ class Nav extends Component {
           }}
           options={{
             tabBarIcon: props => (
-              <View
-                style={styles.iconContainer}
-                onPress={props.getTransactions}>
+              <View style={styles.iconContainer}>
                 <Image
                   source={wallet}
                   style={{
@@ -150,6 +149,10 @@ class Nav extends Component {
     );
   }
 }
+
+Nav.propTypes = {
+  getTransactions: PropTypes.func,
+};
 
 const mapDispatchToProps = dispatch => {
   return {

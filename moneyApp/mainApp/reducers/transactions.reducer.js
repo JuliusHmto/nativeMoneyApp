@@ -1,7 +1,13 @@
-import {GET_TRANSACTIONS} from '../api/api.types';
+import {
+  GET_TRANSACTIONS,
+  GET_CURRENT_MONTH_TRX,
+  GET_LAST_MONTH_TRX,
+} from '../api/api.types';
 
 const initialState = {
   transactions: [],
+  currMonthTransactions: [],
+  lastMonthTransactions: [],
 };
 
 export default function (state = initialState, action) {
@@ -10,6 +16,16 @@ export default function (state = initialState, action) {
       return {
         ...state,
         transactions: action.payload,
+      };
+    case GET_CURRENT_MONTH_TRX:
+      return {
+        ...state,
+        currMonthTransactions: action.payload,
+      };
+    case GET_LAST_MONTH_TRX:
+      return {
+        ...state,
+        lastMonthTransactions: action.payload,
       };
 
     default:

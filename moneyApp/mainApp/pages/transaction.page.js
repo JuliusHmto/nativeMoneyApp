@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import TransactionComponent from '../components/transaction/Transaction.component';
-import {getTransactions} from '../api/api.utils';
 import {result} from 'lodash';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -9,21 +8,13 @@ class TransactionPage extends Component {
   state = {};
 
   render() {
-    const {getTransactions, transactions} = this.props;
-    return (
-      <TransactionComponent
-        transactions={transactions}
-        getTransactions={getTransactions}
-      />
-    );
+    const {transactions} = this.props;
+    return <TransactionComponent transactions={transactions} />;
   }
 }
 
 TransactionPage.propTypes = {
   transactions: PropTypes.object,
-  getTransactions: PropTypes.func,
-  groupByDay: PropTypes.func,
-  groupByMonth: PropTypes.func,
 };
 
 const mapStateToProps = state => ({
@@ -31,9 +22,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => {
-  return {
-    getTransactions: () => dispatch(getTransactions()),
-  };
+  return {};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(TransactionPage);

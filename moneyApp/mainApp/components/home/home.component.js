@@ -1,13 +1,5 @@
 import React, {Component} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  Text,
-  TouchableOpacity,
-  View,
-  Image,
-} from 'react-native';
+import {ScrollView, Text, TouchableOpacity, View, Image} from 'react-native';
 import styles from './Home.styles';
 import greenBox from '../../../images/greenBox.png';
 import redBox from '../../../images/redBox.png';
